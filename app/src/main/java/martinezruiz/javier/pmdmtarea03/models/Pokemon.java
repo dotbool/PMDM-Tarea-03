@@ -1,9 +1,9 @@
 package martinezruiz.javier.pmdmtarea03.models;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+
 
 /**
  * Cuando traemos datos de la API, para poder crear objetos que sean utilizables por la aplicación,
@@ -16,25 +16,27 @@ import java.util.ArrayList;
  * La anotación @expose indice que se trata de un Json que puede ser serializado o deserializado
  */
 public class Pokemon {
+
+
+    public Pokemon() {
+
+    }
+
     @SerializedName("name")
-    @Expose
     private String nombre;
     @SerializedName("id")
-    @Expose
     private int indice;
 
     @SerializedName("sprites")
-    @Expose
-    private ArrayList<String> imgUrl;
-    @SerializedName("types")
-    private ArrayList<String> tipo;
+    private ImgUrl imgUrl;
     @SerializedName("weight")
-    @Expose
     private int peso;
 
     @SerializedName("height")
-    @Expose
     private int altura;
+
+    @SerializedName("types")
+    private ArrayList<BigType> types;
 
 
     public int getAltura() {
@@ -45,11 +47,11 @@ public class Pokemon {
         this.altura = altura;
     }
 
-    public ArrayList<String> getImgUrl() {
+    public ImgUrl getImgUrl() {
         return imgUrl;
     }
 
-    public void setImgUrl(ArrayList<String> imgUrl) {
+    public void setImgUrl(ImgUrl imgUrl) {
         this.imgUrl = imgUrl;
     }
 
@@ -60,15 +62,15 @@ public class Pokemon {
     public void setIndice(int indice) {
         this.indice = indice;
     }
-
+//
     public String getNombre() {
         return nombre;
     }
-
+//
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+//
     public int getPeso() {
         return peso;
     }
@@ -77,11 +79,23 @@ public class Pokemon {
         this.peso = peso;
     }
 
-    public ArrayList<String> getTipo() {
-        return tipo;
+
+    public ArrayList<BigType> getTypes() {
+        return types;
     }
 
-    public void setTipo(ArrayList<String> tipo) {
-        this.tipo = tipo;
+    public void setTypes(ArrayList<BigType> types) {
+        this.types = types;
     }
+
+    String testImagen;
+
+    public String getTestImagen() {
+        return testImagen;
+    }
+
+    public void setTestImagen(String testImagen) {
+        this.testImagen = testImagen;
+    }
+
 }

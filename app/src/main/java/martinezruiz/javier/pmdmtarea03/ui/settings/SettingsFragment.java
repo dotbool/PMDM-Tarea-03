@@ -85,10 +85,6 @@ public class SettingsFragment extends Fragment {
         binding.btnLogoutSettings.setOnClickListener(view-> {
 
             settingsViewModel.setLoginState(false);
-//            Intent i = new Intent(requireActivity(), LoginActivity.class);
-//            i.putExtra("logout", "logout");
-//            startActivity(i);
-//            requireActivity().finish();
 
         });
         settingsViewModel.getAllowDelete().observe(getViewLifecycleOwner(), value-> {

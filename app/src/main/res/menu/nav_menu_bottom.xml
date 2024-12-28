@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_mis_pokemons"
+        android:id="@+id/navigation_pokemons"
         android:icon="@drawable/mispokemons"
         android:title="@string/menu_bottom_pokemons" />
 

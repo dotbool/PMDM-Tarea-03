@@ -6,8 +6,10 @@ import java.util.List;
 
 import martinezruiz.javier.pmdmtarea03.models.PokedexItem;
 import martinezruiz.javier.pmdmtarea03.models.PokedexList;
+import retrofit2.Callback;
 
 public interface PokedexListRepositoryInterface {
 
-    public LiveData<List<PokedexItem>> getPokedexList(int off, int limit);
+    public void getPokedexList(int off, int limit, Callback<PokedexList> callback);
+
 }

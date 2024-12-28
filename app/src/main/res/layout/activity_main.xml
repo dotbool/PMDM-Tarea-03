@@ -8,23 +8,23 @@
     tools:context=".MainActivity">
 
 
+    <!--    Actually, Navigation can't find NavController in FrameLayout. So replacing-->
+<!--    <FrameLayout> with <fragment> will make it work
+    Aunque el id recomienda el FragmentContainerView, ésta hereda de Framelayout
+
+.-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view_bottom"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/nav_menu_bottom">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-
-<!--    Actually, Navigation can't find NavController in FrameLayout. So replacing-->
-<!--    <FrameLayout> with <fragment> will make it work
-    Aunque el id recomienda el FragmentContainerView, ésta hereda de Framelayout
-
-.-->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -32,12 +32,12 @@
         android:layout_height="match_parent"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view_bottom"
+        app:layout_constraintDimensionRatio="w,1:1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/bottom_menu_navigation"
 
-        />
+        app:navGraph="@navigation/bottom_menu_navigation" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

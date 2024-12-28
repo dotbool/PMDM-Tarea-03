@@ -5,5 +5,4 @@
     <item name="android:textStyle">bold</item>
     <item name="android:layout_marginBottom">32dp</item>
 </style>
-
 </resources>
