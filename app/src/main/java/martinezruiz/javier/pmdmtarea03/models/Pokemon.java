@@ -1,5 +1,8 @@
 package martinezruiz.javier.pmdmtarea03.models;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -19,7 +22,7 @@ public class Pokemon {
 
 
     public Pokemon() {
-
+        state = state == null ? State.FREE: state;
     }
 
     @SerializedName("name")
@@ -37,6 +40,9 @@ public class Pokemon {
 
     @SerializedName("types")
     private ArrayList<BigType> types;
+
+
+    private State state;
 
 
     public int getAltura() {
@@ -98,4 +104,19 @@ public class Pokemon {
         this.testImagen = testImagen;
     }
 
+    public State getState() {
+        return state;
+    }
+
+    public void setState(State state) {
+        this.state = state;
+    }
+
+    public enum State { FREE, WANTED, CAPTURED }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return nombre+": "+state + this.hashCode();
+    }
 }

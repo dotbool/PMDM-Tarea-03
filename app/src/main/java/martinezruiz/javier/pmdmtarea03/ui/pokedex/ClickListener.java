@@ -1,7 +1,7 @@
 package martinezruiz.javier.pmdmtarea03.ui.pokedex;
 
-import martinezruiz.javier.pmdmtarea03.models.PokedexItem;
+import martinezruiz.javier.pmdmtarea03.models.Pokemon;
 
 public interface ClickListener {
-    void onClick(PokedexItem item);
+    void onClick(Pokemon pokemon);
 }
